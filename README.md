@@ -1,27 +1,60 @@
-# NgxAdibroDatetimePicker
+# ngx-adibro-datetime-picker for Angular 4+
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
+This is an angular directive for date-time picker. This is built on top of jquery.
 
-## Development server
+## Installation
+```
+npm install --save ngx-adibro-datetime-picker
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Usage
 
-## Code scaffolding
+### In angular-cli/angular.json add styles and scripts:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+"styles": [
+"../node_modules/ngx-adibro-datetime-picker/src/assets/jquery-ui.css",
+"../node_modules/ngx-adibro-datetime-picker/src/assets/css/jquery-ui-timepicker-addon.css"
+],
+"scripts": [
+"../node_modules/ngx-adibro-datetime-picker/src/assets/js/jquery.js",              
+"../node_modules/ngx-adibro-datetime-picker/src/assets/jquery-ui.js",
+"../node_modules/ngx-adibro-datetime-picker/src/assets/js/jquery-ui-timepicker-addon.js"
+],
+```
 
-## Build
+### Inside app.module file import the directive and module:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+```
+import {NgxAdibroDatetimePickerModule, NgxAdibroDatetimePickerDirective} from 'ngx-adibro-datetime-picker';
 
-## Running unit tests
+@NgModule({
+  declarations: [
+    ...
+  ],
+  imports: [
+    ... ,
+    NgxAdibroDatetimePickerModule,
+    ... ,
+  ],
+  providers: [NgxAdibroDatetimePickerDirective],
+  bootstrap: [...]
+})
+export class AppModule { }
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+### In your HTML file you can do:
 
-## Running end-to-end tests
+```
+<input type="text" id="startid" [readonly]="false" [minimumDate]="false" [onlyDatePicker]="false" (dateChange)="onStartDateChange($event)" ngxAdibroDatetimePicker/>
+```
+### You can then access the value of the picker in your component file like so:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
+startDate:any = new Date();
+onStartDateChange(date){
+    this.startDate = date;
+    this.startDate = new Date(this.startDate).toISOString();
+  }
+```
+Have fun !!!
