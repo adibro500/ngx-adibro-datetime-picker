@@ -1,4 +1,4 @@
-# ngx-adibro-datetime-picker for Angular 4+
+# ngx-adibro-datetime-picker for Angular 5+
 
 This is an angular directive for date-time picker. This is built on top of jquery.
 
