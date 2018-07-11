@@ -2,6 +2,8 @@
 
 This is an angular directive for date-time picker. This is built on top of jquery.
 
+Note: This is a replacement to ngx-teslas-date-picker
+
 ## Installation
 ```
 npm install --save ngx-adibro-datetime-picker@latest
