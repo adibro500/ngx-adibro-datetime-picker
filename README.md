@@ -4,7 +4,7 @@ This is an angular directive for date-time picker. This is built on top of jquer
 
 ## Installation
 ```
-npm install --save ngx-adibro-datetime-picker
+npm install --save ngx-adibro-datetime-picker@latest
 ```
 
 ## Usage
@@ -46,7 +46,7 @@ export class AppModule { }
 ### In your HTML file you can do:
 
 ```
-<input type="text" id="startid" [readonly]="false" [minimumDate]="false" [onlyDatePicker]="false" (dateChange)="onStartDateChange($event)" ngxAdibroDatetimePicker/>
+<input type="text" id="startid" [readonly]="true" [minimumDate]="false" [onlyDatePicker]="false" [formatDate]="'dd/mm/yy'" ngxAdibroDatetimePicker  (dateChange)="startChange($event)"/>
 ```
 ### You can then access the value of the picker in your component file like so:
 

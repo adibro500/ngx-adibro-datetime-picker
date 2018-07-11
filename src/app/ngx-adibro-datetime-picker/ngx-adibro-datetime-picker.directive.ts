@@ -15,6 +15,7 @@ export class NgxAdibroDatetimePickerDirective {
   @Input() minimumDate: boolean = false;
   @Input() onlyDatePicker: boolean = false;
   @Output() dateChange = new EventEmitter();
+  @Input() formatDate;
   loadAPI: Promise<any>;
 
   constructor(public el: ElementRef, public renderer: Renderer) {
@@ -23,6 +24,7 @@ export class NgxAdibroDatetimePickerDirective {
         $(this.el.nativeElement).datepicker({
           controlType: 'select'
           , oneLine: true,
+          dateFormat: this.formatDate,
           minDate: this.minimumDate === false ? '' : new Date(),
           onSelect: (value) => {
             this.value = value;
@@ -47,6 +49,7 @@ export class NgxAdibroDatetimePickerDirective {
         $(this.el.nativeElement).datetimepicker({
           controlType: 'select',
           oneLine: true,
+          dateFormat: this.formatDate,
           timeFormat: 'hh:mm tt',
           minDate: this.minimumDate === false ? '' : new Date(),
           onSelect: (value) => {
