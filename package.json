@@ -56,8 +56,11 @@
     "tslint": "~5.9.1",
     "typescript": "~2.5.3"
   },
-  "repository" :
-  { "type" : "git"
-  , "url" : "https://github.com/adibro500/ngx-adibro-datetime-picker.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adibro500/ngx-adibro-datetime-picker.git"
+  },
+  "dependencies": {
+    "hoek": "^5.0.3"
   }
 }
