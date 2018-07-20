@@ -50,7 +50,7 @@ export class NgxAdibroDatetimePickerDirective {
           controlType: 'select',
           oneLine: true,
           dateFormat: this.formatDate,
-          timeFormat: 'hh:mm tt',
+          timeFormat: 'HH:mm tt',
           minDate: this.minimumDate === false ? '' : new Date(),
           onSelect: (value) => {
             this.value = value;

@@ -4,6 +4,11 @@ This is an angular directive for date-time picker. This is built on top of jquer
 
 Note: This is a replacement to ngx-teslas-date-picker
 
+# For demos please visit 
+
+[demos](http://righteous-society.surge.sh/)
+
+
 ## Installation
 ```
 npm install --save ngx-adibro-datetime-picker@latest

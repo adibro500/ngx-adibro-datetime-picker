@@ -1,6 +1,6 @@
 {
   "name": "ngx-adibro-datetime-picker",
-  "version": "0.0.3",
+  "version": "0.0.8",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -12,6 +12,16 @@
     "ng-package": "ng-packagr -p ng-package.json && cp -r ./src/assets ./dist/src/assets"
   },
   "private": false,
+  "keywords": [
+    "date",
+    "time",
+    "picker",
+    "jquery",
+    "angular",
+    "angularjs",
+    "angular 5",
+    "calendar"
+  ],
   "peerDependencies": {
     "@angular/animations": "^5.2.0",
     "@angular/common": "^5.2.0",
@@ -28,7 +38,6 @@
     "zone.js": "^0.8.19"
   },
   "devDependencies": {
-    "@angular/cli": "~1.7.3",
     "@angular/compiler-cli": "^5.2.0",
     "@angular/language-service": "^5.2.0",
     "@types/jasmine": "~2.8.3",
@@ -46,5 +55,9 @@
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
     "typescript": "~2.5.3"
+  },
+  "repository" :
+  { "type" : "git"
+  , "url" : "https://github.com/adibro500/ngx-adibro-datetime-picker.git"
   }
 }
